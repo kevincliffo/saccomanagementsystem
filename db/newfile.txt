@@ -1,0 +1,6 @@
+UPDATE movies SET filmName = :filmName, 
+            filmDescription = :filmDescription, 
+            filmImage = :filmImage,  
+            filmPrice = :filmPrice,  
+            filmReview = :filmReview  
+            WHERE filmID = :filmID
