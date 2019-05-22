@@ -13,6 +13,7 @@
 	}
 
 	$input = json_decode($param, TRUE); //convert JSON into array
+	
 	//Check for Mandatory parameters
 	if(isset($input['memberno']) && isset($input['password'])){
 		$memberno = $input['memberno'];
@@ -29,7 +30,7 @@
 				if(password_verify(concatPasswordWithSalt($password,$salt),$passwordHashDB)){
 					$response["status"] = 0;
 					$response["message"] = "Login successful";
-					$response["full_name"] = $fullName;
+					$response["FullName"] = $fullName;
 					$response["MobileNo"] = $mobileno;
 					$response["IDNumber"] = $idnumber;
 					$response["MemberId"] = $memberid;

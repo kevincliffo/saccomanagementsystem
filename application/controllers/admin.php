@@ -64,14 +64,7 @@ class Admin extends CI_Controller {
         $data['faviconpartpath'] = base_url().'img/favicon.ico';
         $this->load->view('view_financials', $data);     
     }
-    
-    function userexists()
-    {
-        $email = $this->input->post('inputEmail');
-        echo $email;
-        die();
-    }
-    
+
     function validate()
     {
         $this->load->model('model_users');
